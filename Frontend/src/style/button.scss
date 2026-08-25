@@ -1,0 +1,21 @@
+.button{
+    border: none;
+    outline: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+
+    &.primary-button{
+        background-color: #f93a73;
+        color: whitesmoke;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+
+    }
+    &.active{
+        transform: scale(0.9);
+    }
+}

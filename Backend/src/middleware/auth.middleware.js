@@ -1,9 +1,10 @@
 const jwt = require("jsonwebtoken")
 const crypto = require("crypto")
+const config = require("../config/config")
 
 const { redisClient } = require("../config/redis")
 
-async function authMiddleware(req, res, next) {
+async function authUser(req, res, next) {
 
     const token = req.cookies.token
 
@@ -18,7 +19,7 @@ async function authMiddleware(req, res, next) {
         // 1. Verify JWT
         const decodedToken = jwt.verify(
             token,
-            process.env.JWT_SECRET
+            config.JWT_SECRET
         )
 
         // 2. Hash the token
@@ -53,4 +54,4 @@ async function authMiddleware(req, res, next) {
     }
 }
 
-module.exports = authMiddleware
+module.exports = authUser
