@@ -18,6 +18,6 @@ Steps to clone, install dependencies, configure `.env`, and run frontend/backend
 List the required variables, without exposing actual secrets.
 
 ## How to run
-cd Backend - in one terminal
-cd Frontent - in another terminal
-npm run dev (in both the terminals)
+- cd Backend - in one terminal
+- cd Frontent - in another terminal
+- npm run dev (in both the terminals)
