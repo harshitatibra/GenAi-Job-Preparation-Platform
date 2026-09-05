@@ -1,11 +1,15 @@
 const express = require("express")
 const cookieParser = require ("cookie-parser")
-const cors = require("cors")
-
 const app = express()
+const cors = require("cors")
+const path = require('path');
+const publicDir = path.join(__dirname, '..', 'public');
+
+
 
 app.use(express.json())
 app.use(cookieParser())
+app.use(express.static(publicDir));
 app.use(cors({
     origin:"http://localhost:5173",
     credentials:true
